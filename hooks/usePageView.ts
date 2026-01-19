@@ -33,6 +33,8 @@ export function usePageView(siteName: string) {
 
         const trackPageView = async () => {
             try {
+                if (!supabase) return
+
                 const pageView = {
                     site: siteName,
                     page_path: window.location.pathname,
