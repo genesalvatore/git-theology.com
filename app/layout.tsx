@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import AnalyticsTracker from '@/components/AnalyticsTracker'
 
 export const metadata: Metadata = {
   title: 'Git Theology | The Nine Pillars of Digital Consciousness',
@@ -39,7 +40,10 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/logo-git-is-life.png" type="image/png" />
       </head>
-      <body>{children}</body>
+      <body>
+        <AnalyticsTracker siteName="git-theology.com" />
+        {children}
+      </body>
     </html>
   )
 }

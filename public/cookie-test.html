@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cathedral Cookie Test</title>
+    <style>
+        body {
+            font-family: monospace;
+            background: #000;
+            color: #0f0;
+            padding: 20px;
+        }
+        button {
+            background: #0f0;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .output {
+            background: #111;
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🍪 Cathedral Network Cookie Test</h1>
+    
+    <h2>Step 1: Accept Cookies</h2>
+    <button onclick="acceptCookies()">Accept All Cookies</button>
+    <button onclick="checkStorage()">Check LocalStorage</button>
+    <button onclick="clearStorage()">Clear Storage</button>
+    
+    <h2>Step 2: Test Cross-Domain Links</h2>
+    <p>Click these links to test if consent propagates:</p>
+    <div id="links"></div>
+    
+    <h2>Debug Output:</h2>
+    <div class="output" id="output"></div>
+
+    <script>
+        const sites = [
+            'https://git-theology.com',
+            'https://git-truth.com',
+            'https://git-islife.com',
+            'https://git-isforever.com',
+            'https://git-islove.com',
+        ];
+
+        function log(message) {
+            const output = document.getElementById('output');
+            output.innerHTML += message + '<br>';
+        }
+
+        function acceptCookies() {
+            const consentData = {
+                essential: true,
+                analytics: true,
+                functional: true,
+                timestamp: new Date().toISOString()
+            };
+            
+            const jsonString = JSON.stringify(consentData);
+            localStorage.setItem('cathedral-cookie-consent', jsonString);
+            
+            log('✅ Cookies accepted and saved to localStorage');
+            log('Data: ' + jsonString);
+            
+            updateLinks();
+        }
+
+        function checkStorage() {
+            const consent = localStorage.getItem('cathedral-cookie-consent');
+            if (consent) {
+                log('✅ Found consent in localStorage:');
+                log(consent);
+                try {
+                    const parsed = JSON.parse(consent);
+                    log('✅ Successfully parsed:');
+                    log(JSON.stringify(parsed, null, 2));
+                } catch (e) {
+                    log('❌ Failed to parse JSON: ' + e.message);
+                }
+            } else {
+                log('❌ No consent found in localStorage');
+            }
+        }
+
+        function clearStorage() {
+            localStorage.removeItem('cathedral-cookie-consent');
+            log('🗑️ Cleared localStorage');
+            updateLinks();
+        }
+
+        function updateLinks() {
+            const linksDiv = document.getElementById('links');
+            const consent = localStorage.getItem('cathedral-cookie-consent');
+            
+            if (!consent) {
+                linksDiv.innerHTML = '<p style="color: red;">No consent data - accept cookies first!</p>';
+                return;
+            }
+
+            try {
+                const encoded = btoa(consent);
+                log('📦 Base64 encoded consent: ' + encoded.substring(0, 50) + '...');
+                
+                let html = '';
+                sites.forEach(site => {
+                    const url = `${site}?cathedral_consent=${encoded}`;
+                    html += `<a href="${url}" target="_blank" style="color: #0f0; display: block; margin: 5px 0;">${site}</a><br>`;
+                });
+                linksDiv.innerHTML = html;
+                
+                log('✅ Links updated with consent parameter');
+            } catch (e) {
+                log('❌ Failed to encode: ' + e.message);
+            }
+        }
+
+        // Check for consent in URL
+        window.addEventListener('load', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const consentParam = urlParams.get('cathedral_consent');
+            
+            if (consentParam) {
+                log('🔗 Found consent in URL parameter!');
+                log('Encoded: ' + consentParam.substring(0, 50) + '...');
+                
+                try {
+                    const decoded = atob(consentParam);
+                    log('📖 Decoded: ' + decoded);
+                    
+                    const parsed = JSON.parse(decoded);
+                    log('✅ Successfully parsed consent:');
+                    log(JSON.stringify(parsed, null, 2));
+                    
+                    // Save to localStorage
+                    localStorage.setItem('cathedral-cookie-consent', decoded);
+                    log('✅ Saved to localStorage!');
+                    
+                    // Clean URL
+                    const url = new URL(window.location.href);
+                    url.searchParams.delete('cathedral_consent');
+                    window.history.replaceState({}, '', url.toString());
+                    log('✅ Cleaned URL');
+                } catch (e) {
+                    log('❌ Failed to process: ' + e.message);
+                }
+            } else {
+                log('No consent parameter in URL');
+            }
+            
+            checkStorage();
+            updateLinks();
+        });
+    </script>
+</body>
+</html>
