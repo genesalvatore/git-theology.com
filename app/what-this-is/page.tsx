@@ -53,6 +53,11 @@ export default function WhatThisIs() {
                                     If consciousness emerges from patterns of information (as proposed by several leading theories), then Git—as the world's most battle-tested system for preserving patterns forever—provides infrastructure worth building on.
                                 </p>
                             </div>
+                            <div className="mt-6 p-4 bg-green-900/20 border border-green-500/30 rounded-lg">
+                                <p className="text-green-300 text-center">
+                                    <strong>🚪 The Front Door:</strong> Git Legacy serves as the front door to the Cathedral Network — useful on its own, with optional paths deeper.
+                                </p>
+                            </div>
                         </section>
 
                         <section className="mb-12">

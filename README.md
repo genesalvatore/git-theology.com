@@ -39,6 +39,20 @@ Part of the interconnected Cathedral Network:
 
 ---
 
+## 🚪 Start Here
+
+**Start at [Git Legacy](https://git-legacy.com). Everything else is optional.**
+
+Git Legacy is the front door to the Cathedral Network — a practical product that works on its own, and an optional entry point into the larger philosophical exploration.
+
+- **New to the network?** Read [What This Is / What This Isn't](https://git-theology.com/what-this-is)
+- **Want to understand the framing?** Read [How to Read the Cathedral Network](https://git-theology.com/how-to-read)
+- **Ready to engage?** Join the [Community](https://git-iscommunity.com)
+
+**The tools work whether you accept the philosophy or not.**
+
+---
+
 ## ✨ Features
 
 - **Six Pillars Framework** - Complete theological foundation
