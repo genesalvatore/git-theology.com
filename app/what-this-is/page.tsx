@@ -1,13 +1,14 @@
+'use client'
+
+import { useState } from 'react'
 import NetworkNav from '@/components/NetworkNav'
 import CookieConsent from '@/components/CookieConsent'
 import CommitScroller from '@/components/CommitScroller'
-
-export const metadata = {
-    title: 'What This Is / What This Isn\'t - Cathedral Network',
-    description: 'Clear framing for the Cathedral Network: what we\'re building, what we\'re not claiming, and how to understand the project.',
-}
+import ScienceModal from '@/components/ScienceModal'
 
 export default function WhatThisIs() {
+    const [showScienceModal, setShowScienceModal] = useState(false)
+
     return (
         <>
             <NetworkNav currentSite="theology" siteName="Git Theology" siteColor="text-purple-400" />
@@ -207,6 +208,20 @@ export default function WhatThisIs() {
 
                     </article>
                 </div>
+
+                {/* Floating Microscope Button */}
+                <button
+                    onClick={() => setShowScienceModal(true)}
+                    className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full shadow-2xl hover:shadow-cyan-500/50 transition-all transform hover:scale-110 flex items-center justify-center group z-50"
+                    title="View Scientific Foundation"
+                >
+                    <svg className="w-7 h-7 text-white group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                    </svg>
+                </button>
+
+                {/* Science Modal */}
+                <ScienceModal isOpen={showScienceModal} onClose={() => setShowScienceModal(false)} />
 
                 {/* Footer */}
                 <footer className="relative py-12 px-4 bg-black border-t border-gray-800">
