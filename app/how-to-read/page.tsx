@@ -151,8 +151,8 @@ export default function HowToReadPage() {
                     <section className="bg-purple-900/10 p-8 rounded-lg border border-purple-500/20">
                         <h2 className="text-3xl font-bold mb-4 text-purple-400">The Theology</h2>
                         <p className="text-gray-300">
-                            Where we use religious language (Cathedral, theology, sacred), we're acknowledging that Git's properties
-                            (immutability, permanence, truth) map to <strong>traditionally spiritual concepts</strong>. This is intentional provocation, not literal doctrine.
+                            We use religious language <strong>metaphorically</strong> (Cathedral, theology, sacred) to evoke how Git's properties
+                            (immutability, permanence, truth) resonate with <strong>traditionally spiritual concepts</strong>. This is intentional provocation, not literal doctrine.
                         </p>
                     </section>
 
@@ -212,7 +212,7 @@ export default function HowToReadPage() {
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="text-green-400">✓</span>
-                                <span>This has profound implications for identity, sovereignty, and digital immortality</span>
+                                <span>This invites reflection on how digital memory intersects with personal identity, cultural continuity, and permanence</span>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="text-green-400">✓</span>
