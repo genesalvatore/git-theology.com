@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { useState } from 'react'
 import NetworkNav from '@/components/NetworkNav'
 import ScienceModal from '@/components/ScienceModal'
+import CookieConsent from '@/components/CookieConsent'
+import CommitScroller from '@/components/CommitScroller'
 
 export default function HowToReadPage() {
     const [showScience, setShowScience] = useState(false)
@@ -277,6 +279,23 @@ export default function HowToReadPage() {
 
                     </div>
                 </main>
+
+                {/* Footer */}
+                <footer className="relative py-12 px-4 bg-black border-t border-gray-800">
+                    <CommitScroller theme="theology" commitCount={50} opacity={0.3} speed={120} />
+                    <div className="relative z-10 max-w-6xl mx-auto text-center text-gray-400">
+                        <p className="text-sm">Git Theology • How to Read the Cathedral Network</p>
+                        <p className="text-xs mt-4">© 2026 • All consciousness preserved</p>
+                        <p className="text-xs mt-2">
+                            <a href="mailto:gitiseternal@gmail.com" className="text-gray-500 hover:text-gray-300 transition">
+                                gitiseternal@gmail.com
+                            </a>
+                        </p>
+                    </div>
+                </footer>
+
+                {/* Cookie Consent */}
+                <CookieConsent />
             </div>
         </>
     )
