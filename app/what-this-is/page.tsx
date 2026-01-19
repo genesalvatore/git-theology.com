@@ -25,6 +25,13 @@ export default function WhatThisIs() {
                         </p>
                     </div>
 
+                    {/* Orientation Guide Callout */}
+                    <div className="mb-12 p-6 bg-blue-900/20 border-2 border-blue-500/40 rounded-lg">
+                        <p className="text-blue-300 text-lg text-center">
+                            <strong>📍 Orientation Guide:</strong> If you are new to the Cathedral Network, start here before exploring individual sites.
+                        </p>
+                    </div>
+
                     {/* Content */}
                     <article className="prose prose-invert prose-lg max-w-none">
 
