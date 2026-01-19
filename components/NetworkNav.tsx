@@ -99,8 +99,8 @@ export default function NetworkNav({ currentSite, siteName, siteColor }: Network
             ))}
           </div>
 
-          {/* Desktop Icons - Tighter spacing */}
-          <div className="flex items-center gap-2">
+          {/* Desktop Icons - Tight spacing */}
+          <div className="flex items-center gap-1">
 
             {/* Desktop: How to Read Icon */}
             <a
