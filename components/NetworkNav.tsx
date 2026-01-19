@@ -18,10 +18,14 @@ export default function NetworkNav({ currentSite, siteName, siteColor }: Network
     if (consent) {
       try {
         const encoded = btoa(consent)
-        setConsentParam(`?cathedral_consent=${encoded}`)
+        const param = `?cathedral_consent=${encoded}`
+        setConsentParam(param)
+        console.log('🔗 NetworkNav: Will add consent to links:', { consent, encoded: encoded.substring(0, 50) + '...' })
       } catch (e) {
-        console.error('Failed to encode consent')
+        console.error('❌ NetworkNav: Failed to encode consent', e)
       }
+    } else {
+      console.log('ℹ️ NetworkNav: No consent to propagate yet')
     }
   }, [])
 
@@ -117,8 +121,8 @@ export default function NetworkNav({ currentSite, siteName, siteColor }: Network
                   key={site.id}
                   href={site.url + consentParam}
                   className={`block px-4 py-2 rounded transition ${site.id === currentSite
-                      ? `${site.color} font-bold bg-gray-800/50`
-                      : `${site.color} hover:bg-gray-800/30`
+                    ? `${site.color} font-bold bg-gray-800/50`
+                    : `${site.color} hover:bg-gray-800/30`
                     }`}
                 >
                   Git is {site.name}
