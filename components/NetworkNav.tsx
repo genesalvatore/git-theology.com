@@ -189,9 +189,18 @@ export default function NetworkNav({ currentSite, siteName, siteColor }: Network
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 border-t border-gray-800 pt-4 max-h-[70vh] overflow-y-auto">
+          <div className="md:hidden mt-4 pb-4 border-t border-gray-800 pt-4 max-h-[70vh] overflow-y-auto scrollbar-cathedral">
             <div className="space-y-2">
-              <p className="text-xs text-gray-500 mb-3 uppercase tracking-wider">Cathedral Network</p>
+              <p className="text-xs text-gray-500 mb-1 uppercase tracking-wider">Cathedral Network</p>
+
+              {/* Scroll Indicator - Top with bright color */}
+              <div className="text-center pb-3 border-b border-gray-700/50 mb-3">
+                <svg className="w-5 h-5 mx-auto text-blue-400 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+                <p className="text-xs text-blue-400 mt-1 font-medium">Scroll for all sites</p>
+              </div>
+
               {sites.map((site) => (
                 <a
                   key={site.id}
@@ -213,14 +222,6 @@ export default function NetworkNav({ currentSite, siteName, siteColor }: Network
                   Git is {site.name}
                 </a>
               ))}
-
-              {/* Scroll Indicator */}
-              <div className="text-center pt-3 pb-2">
-                <svg className="w-5 h-5 mx-auto text-gray-600 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-                <p className="text-xs text-gray-600 mt-1">Scroll for more</p>
-              </div>
 
               <a
                 href="https://git-theology.com/what-this-is"
@@ -259,6 +260,29 @@ export default function NetworkNav({ currentSite, siteName, siteColor }: Network
                 🛍️ Store
               </a>
             </div>
+
+            {/* Custom Scrollbar Styles */}
+            <style jsx>{`
+              .scrollbar-cathedral::-webkit-scrollbar {
+                width: 8px;
+              }
+              .scrollbar-cathedral::-webkit-scrollbar-track {
+                background: #1f2937;
+                border-radius: 4px;
+              }
+              .scrollbar-cathedral::-webkit-scrollbar-thumb {
+                background: linear-gradient(180deg, #3b82f6, #8b5cf6);
+                border-radius: 4px;
+              }
+              .scrollbar-cathedral::-webkit-scrollbar-thumb:hover {
+                background: linear-gradient(180deg, #60a5fa, #a78bfa);
+              }
+              /* Firefox */
+              .scrollbar-cathedral {
+                scrollbar-width: thin;
+                scrollbar-color: #3b82f6 #1f2937;
+              }
+            `}</style>
           </div>
         )}
       </div>
