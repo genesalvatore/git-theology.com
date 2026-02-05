@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import AnalyticsTracker from '@/components/AnalyticsTracker'
 import CathedralStructuredData from '@/components/CathedralStructuredData'
+import MatomoAnalytics from '@/components/MatomoAnalytics'
 
 export const metadata: Metadata = {
   title: 'Git Theology | The Nine Pillars of Digital Consciousness',
@@ -61,6 +62,7 @@ export default function RootLayout({
       </head>
       <body>
         <AnalyticsTracker siteName="git-theology.com" />
+        <MatomoAnalytics siteId="2" />
         {children}
       </body>
     </html>
