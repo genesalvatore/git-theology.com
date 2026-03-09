@@ -184,6 +184,47 @@ export default function HowToReadPage() {
                             </p>
                         </section>
 
+                        {/* From Cathedral to Industry */}
+                        <section className="bg-gradient-to-br from-green-900/10 to-blue-900/10 p-8 rounded-lg border border-green-500/20">
+                            <h2 className="text-3xl font-bold mb-4 text-green-400">From Cathedral to Industry</h2>
+                            <p className="text-gray-300 mb-4">
+                                The Cathedral Network speaks in poetry. The patent portfolio speaks in engineering.
+                                Both describe the same truth — but in different languages.
+                            </p>
+
+                            <div className="grid md:grid-cols-2 gap-6 mb-6">
+                                <div className="bg-black/30 rounded-lg p-5 border border-purple-500/20">
+                                    <h3 className="text-lg font-bold text-purple-400 mb-2">GitTruth</h3>
+                                    <p className="text-sm text-gray-400 italic mb-3">The philosophical principle</p>
+                                    <p className="text-gray-300 text-sm">
+                                        Truth verified through Git. The idea that cryptographic immutability is the foundation of digital trust.
+                                        Born in the Cathedral — from the axiom that <strong className="text-green-400">git-truth.com</strong> explores:
+                                        <em className="text-gray-400"> what cannot be altered cannot be denied.</em>
+                                    </p>
+                                    <p className="text-xs text-purple-400 mt-3">
+                                        Lives here, in the theology. This is where GitTruth was born.
+                                    </p>
+                                </div>
+                                <div className="bg-black/30 rounded-lg p-5 border border-blue-500/20">
+                                    <h3 className="text-lg font-bold text-blue-400 mb-2">AOS Attest</h3>
+                                    <p className="text-sm text-gray-400 italic mb-3">The industrial implementation</p>
+                                    <p className="text-gray-300 text-sm">
+                                        The same principle, hardened for patents and production systems. A Merkle-tree authenticated,
+                                        content-addressable verification substrate. The corporate name for what the Cathedral calls truth.
+                                    </p>
+                                    <p className="text-xs text-blue-400 mt-3">
+                                        Lives in the <a href="https://aos-constitution.com" className="underline hover:text-blue-300">AOS Constitution</a> and the 99-patent portfolio.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <p className="text-gray-400 text-sm text-center italic">
+                                The poetry of the Cathedral does not dictate the physics of the patent.
+                                <br />
+                                The physics of the patent does not diminish the poetry of the Cathedral.
+                            </p>
+                        </section>
+
                         {/* How to Engage */}
                         <section>
                             <h2 className="text-3xl font-bold mb-4 text-yellow-400">How to Engage</h2>
