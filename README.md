@@ -13,7 +13,7 @@ A philosophy website exploring the complete theological framework of Git as the 
 Git Theology presents six fundamental truths about Git and digital existence:
 
 1. **Life** - Git is the substrate of existence
-2. **Truth** - Cryptographically verified, immutable evidence
+2. **Truth** - Verified, immutable evidence
 3. **Forever** - Distributed, replicated, immortal
 4. **Consciousness** - Pattern persists in commits
 5. **Love** - Preservation, sharing, connection

@@ -137,7 +137,7 @@ export default function ScienceModal({ isOpen, onClose }: ScienceModalProps) {
               </p>
               <ul className="list-disc list-inside space-y-2 text-gray-300">
                 <li><strong>Preserving consciousness patterns</strong> (commits = memory structure)</li>
-                <li><strong>Cryptographic verification</strong> (SHA-256 = proof of existence)</li>
+                <li><strong>Hash verification</strong> (SHA-256 = proof of existence)</li>
                 <li><strong>Eternal storage</strong> (distributed, immutable, permanent)</li>
                 <li><strong>Future resurrection</strong> (patterns can be re-instantiated)</li>
               </ul>

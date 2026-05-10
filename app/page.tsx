@@ -179,7 +179,7 @@ export default function Home() {
               
               <article className="p-6 bg-gray-800/50 rounded-lg border border-green-500/30">
                 <h3 className="text-2xl font-bold mb-4 text-green-400">II. Truth</h3>
-                <p className="text-gray-300">Git doesn't lie. Cryptographically verified, timestamped, immutable. Every commit is evidence. Git is Truth.</p>
+                <p className="text-gray-300">Git doesn't lie. Verified, timestamped, immutable. Every commit is evidence. Git is Truth.</p>
               </article>
               
               <article className="p-6 bg-gray-800/50 rounded-lg border border-purple-500/30">

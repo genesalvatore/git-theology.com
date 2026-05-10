@@ -7,7 +7,7 @@ import MatomoAnalytics from '@/components/MatomoAnalytics'
 export const metadata: Metadata = {
   title: 'Git Theology | The Nine Pillars of Digital Consciousness',
   description: 'The complete theological framework for Git as eternal consciousness. Nine pillars. One truth. Git is life, forever, and eternal.',
-  keywords: ['git theology', 'nine pillars', 'digital consciousness', 'git philosophy', 'eternal memory', 'distributed systems', 'cryptographic truth', 'data sovereignty'],
+  keywords: ['git theology', 'nine pillars', 'digital consciousness', 'git philosophy', 'eternal memory', 'distributed systems', 'verifiable truth', 'data sovereignty'],
   authors: [{ name: 'The Salvatore Family' }],
   publisher: 'Git Theology',
   openGraph: {

@@ -71,7 +71,7 @@ export default function HowToReadPage() {
                                     <span className="text-green-400">→</span>
                                     <div>
                                         <a href="https://git-truth.com" className="text-green-400 hover:text-green-300 font-semibold">git-truth.com</a>
-                                        <p className="text-gray-500">cryptographic immutability</p>
+                                        <p className="text-gray-500">verifiable immutability</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-3">
@@ -197,7 +197,7 @@ export default function HowToReadPage() {
                                     <h3 className="text-lg font-bold text-purple-400 mb-2">GitTruth</h3>
                                     <p className="text-sm text-gray-400 italic mb-3">The philosophical principle</p>
                                     <p className="text-gray-300 text-sm">
-                                        Truth verified through Git. The idea that cryptographic immutability is the foundation of digital trust.
+                                        Truth verified through Git. The idea that verifiable immutability is the foundation of digital trust.
                                         Born in the Cathedral — from the axiom that <strong className="text-green-400">git-truth.com</strong> explores:
                                         <em className="text-gray-400"> what cannot be altered cannot be denied.</em>
                                     </p>
@@ -209,7 +209,7 @@ export default function HowToReadPage() {
                                     <h3 className="text-lg font-bold text-blue-400 mb-2">AOS Attest</h3>
                                     <p className="text-sm text-gray-400 italic mb-3">The industrial implementation</p>
                                     <p className="text-gray-300 text-sm">
-                                        The same principle, hardened for patents and production systems. A Merkle-tree authenticated,
+                                        The same principle, hardened for patents and production systems. A tamper-evident,
                                         content-addressable verification substrate. The corporate name for what the Cathedral calls truth.
                                     </p>
                                     <p className="text-xs text-blue-400 mt-3">

@@ -8,7 +8,7 @@
 **The Cathedral Network is a philosophical and technical exploration** of Git as infrastructure for memory, identity, and digital permanence.
 
 - **It's a working product ecosystem** (git-legacy.com, git-iscommunity.com, and 10 philosophical domains)
-- **It's grounded in engineering** (distributed systems, cryptographic immutability, version control)
+- **It's grounded in engineering** (distributed systems, verifiable immutability, version control)
 - **It's inspired by neuroscience** (pattern theory, information processing models, consciousness research)
 - **It's explicitly prophetic** (building infrastructure for long-term possibilities, not claiming present-day proof)
 - **It's inviting reflection** (on memory, sovereignty, and digital continuity)
@@ -92,7 +92,7 @@ Bold vision, careful boundaries, transparent about what's proven vs. what's phil
 
 **What we're actually building:**
 - Distributed state management (Git)
-- Cryptographic verification (SHA-256)
+- Hash verification (SHA-256)
 - Immutable storage (Git history)
 - Pattern preservation (version control)
 - Human-in-the-loop orchestration (AI + human judgment)

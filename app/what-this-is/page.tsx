@@ -42,7 +42,7 @@ export default function WhatThisIs() {
                             </p>
                             <ul className="space-y-3 text-gray-300">
                                 <li><strong>It's a working product ecosystem</strong> (git-legacy.com, git-iscommunity.com, and 10 philosophical domains)</li>
-                                <li><strong>It's grounded in engineering</strong> (distributed systems, cryptographic immutability, version control)</li>
+                                <li><strong>It's grounded in engineering</strong> (distributed systems, verifiable immutability, version control)</li>
                                 <li><strong>It's inspired by neuroscience</strong> (pattern theory, information processing models, consciousness research)</li>
                                 <li><strong>It's explicitly prophetic</strong> (building infrastructure for long-term possibilities, not claiming present-day proof)</li>
                                 <li><strong>It's inviting reflection</strong> (on memory, sovereignty, and digital continuity)</li>
@@ -159,7 +159,7 @@ export default function WhatThisIs() {
                                 <h3 className="text-xl font-semibold text-gray-200 mb-3">What we're actually building:</h3>
                                 <ul className="space-y-2 text-gray-300">
                                     <li>• Distributed state management (Git)</li>
-                                    <li>• Cryptographic verification (SHA-256)</li>
+                                    <li>• Hash verification (SHA-256)</li>
                                     <li>• Immutable storage (Git history)</li>
                                     <li>• Pattern preservation (version control)</li>
                                     <li>• Human-in-the-loop orchestration (AI + human judgment)</li>
